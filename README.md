@@ -12,30 +12,19 @@
 
 *MENTOR*: NEELA SANTOSH
 
-## Develop a Python-based tool to monitor the integrity of files within a specified directory. The tool should be capable of generating a secure baseline of file hashes and later verifying the current state of the directory against that baseline to detect unauthorized or accidental changes.
+#This Python script provides a simple and effective way to monitor the integrity of files in a given directory. It helps detect unauthorized changes, accidental deletions, or unexpected file additions by comparing current file hashes with a previously stored baseline.
 
-Key Features:
+📌 Features
+Generate a baseline of SHA-256 hashes for all files in a directory.
 
-Baseline Initialization (init)
+Detect and log:
 
-Recursively scan all files in the target directory.
+🆕 New files
 
-Generate SHA-256 hashes for each file.
+❌ Deleted files
 
-Save the hash data in a JSON file (file_integrity_baseline.json) as a trusted reference snapshot.
+✏️ Modified files
 
-Integrity Check (check)
+Outputs a clear summary to the console.
 
-Re-scan the current state of the directory.
-
-Compare with the previously saved baseline.
-
-Identify and report:
-
-New files (present now but not in the baseline)
-
-Deleted files (missing now but present in the baseline)
-
-Modified files (present in both but with different hashes)
-
-Log all changes with timestamps to file_integrity_log.txt.
+Logs detailed results to file_integrity_log.txt.
